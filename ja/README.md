@@ -104,7 +104,19 @@ workflows:
 
 もし、 sha1 のハッシュ値を計算する方法が準備できていない場合は以下のコードを参考に算出してください。
 
-<script src="https://gist.github.com/hisasann/42cc85ac73361849244cb6046e3bc0bd.js"></script>
+```javascript
+'use strict'
+
+const crypto = require('crypto');
+const fs = require('fs');
+const shasum = crypto.createHash('sha1');
+
+const app_a = __dirname + '/path/to/file.txt';
+fs.readFile(app_a, (err, data) => {
+  shasum.update(data);
+  console.log(app_a, shasum.digest('hex'));
+});
+```
 
 [lemon-sour.js/sha1.js at master · lemon-sour/lemon-sour.js](https://github.com/lemon-sour/lemon-sour.js/blob/master/scripts/sha1.js)
 
