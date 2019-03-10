@@ -13,8 +13,6 @@ Web サイトは Web サーバーをデプロイすれば、更新されます�
 
 あとは、設定ファイルである yml を lemon-sour コマンドツールに渡し、アップデート情報などを取得させます。
 
-[lemon-sour.js/example/app_basic_archive at master · lemon-sour/lemon-sour.js](https://github.com/lemon-sour/lemon-sour.js/tree/master/example/app_basic_archive)
-
 
 ## 主な機能
 
